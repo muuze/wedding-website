@@ -132,6 +132,7 @@
 
     .details-section .section-tag {
       color: var(--muted);
+      text-align: center;
     }
 
     .details-grid {
@@ -166,28 +167,20 @@
       font-weight: 400;
     }
 
-    .big-date {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      line-height: 0.9;
-      color: var(--text);
-    }
-
-    .big-date-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
-      font-size: clamp(2rem, 9vw, 4.5rem);
-      letter-spacing: -0.01em;
-    }
-
-    .big-date-month {
+    .temple-date {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-weight: 300;
-      font-size: clamp(1rem, 4.5vw, 2.5rem);
-      letter-spacing: 0.06em;
-      margin: 0.1rem 0;
+      font-size: clamp(1rem, 3.5vw, 1.3rem);
+      color: var(--text);
+      text-align: center;
+      letter-spacing: 0.04em;
+      margin-top: 0.25rem;
+    }
+
+    .cal-footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
     }
 
     /* Info column */
@@ -399,11 +392,7 @@
       <div class="temple-col">
         <img class="temple-svg" src="temple.png" alt="Logan Utah Temple illustration" />
         <p class="temple-name">Logan Utah Temple</p>
-        <div class="big-date" aria-label="August 21, 2026">
-          <span class="big-date-num">21</span>
-          <span class="big-date-month">August</span>
-          <span class="big-date-num">2026</span>
-        </div>
+        <p class="temple-date">21 August 2026</p>
       </div>
 
       <!-- Reception info -->
@@ -438,26 +427,30 @@
           >↗ Open in Maps</a>
         </div>
 
-        <div class="cal-wrap">
-          <button class="cal-btn" onclick="toggleCal(this)" aria-haspopup="true" aria-expanded="false" aria-controls="cal-menu">
-            Add to Calendar &#9662;
-          </button>
-          <div class="cal-dropdown" id="cal-menu" role="menu">
-            <a
-              class="cal-option"
-              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Payton+%26+Katelyn+Foster+Reception&dates=20260821T190000%2F20260821T210000&ctz=America%2FBoise&location=281+N+4100+E%2C+Rigby%2C+ID+83442&details=Join+us+to+celebrate+the+marriage+of+Payton+%26+Katelyn+Foster!+Inclement+weather+backup%3A+364+N+4100+E%2C+Rigby%2C+ID+83442"
-              target="_blank"
-              rel="noopener noreferrer"
-              role="menuitem"
-            >Google Calendar</a>
-            <button class="cal-option" onclick="downloadICS()" role="menuitem">
-              Apple / Outlook (.ics)
-            </button>
-          </div>
-        </div>
       </div>
 
     </div>
+
+    <div class="cal-footer">
+      <div class="cal-wrap">
+        <button class="cal-btn" onclick="toggleCal(this)" aria-haspopup="true" aria-expanded="false" aria-controls="cal-menu">
+          Add to Calendar &#9662;
+        </button>
+        <div class="cal-dropdown" id="cal-menu" role="menu">
+          <a
+            class="cal-option"
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Payton+%26+Katelyn+Foster+Reception&dates=20260821T190000%2F20260821T210000&ctz=America%2FBoise&location=281+N+4100+E%2C+Rigby%2C+ID+83442&details=Join+us+to+celebrate+the+marriage+of+Payton+%26+Katelyn+Foster!+Inclement+weather+backup%3A+364+N+4100+E%2C+Rigby%2C+ID+83442"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="menuitem"
+          >Google Calendar</a>
+          <button class="cal-option" onclick="downloadICS()" role="menuitem">
+            Apple / Outlook (.ics)
+          </button>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ════════════ CLOSING ════════════ -->
