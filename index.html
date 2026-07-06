@@ -136,9 +136,9 @@
 
     .details-grid {
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      gap: clamp(0.5rem, 3vw, 2.5rem);
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: clamp(1rem, 4vw, 2.5rem);
       max-width: 700px;
       margin: 0 auto;
     }
@@ -164,12 +164,6 @@
       color: var(--muted);
       text-align: center;
       font-weight: 400;
-    }
-
-    /* Date column */
-    .date-col {
-      display: flex;
-      justify-content: center;
     }
 
     .big-date {
@@ -337,12 +331,6 @@
       letter-spacing: 0.03em;
     }
 
-    .closing-heart {
-      margin-top: 0.75rem;
-      font-size: 1rem;
-      color: var(--rose);
-    }
-
     .closing-names {
       margin-top: 0.5rem;
       font-size: 0.68rem;
@@ -407,18 +395,14 @@
     <p class="section-tag">Details</p>
     <div class="details-grid">
 
-      <!-- Temple -->
+      <!-- Temple + Date -->
       <div class="temple-col">
         <img class="temple-svg" src="temple.png" alt="Logan Utah Temple illustration" />
         <p class="temple-name">Logan Utah Temple</p>
-      </div>
-
-      <!-- Date -->
-      <div class="date-col">
         <div class="big-date" aria-label="August 21, 2026">
           <span class="big-date-num">21</span>
-          <span class="big-date-month">Aug</span>
-          <span class="big-date-num">26</span>
+          <span class="big-date-month">August</span>
+          <span class="big-date-num">2026</span>
         </div>
       </div>
 
@@ -479,7 +463,7 @@
   <!-- ════════════ CLOSING ════════════ -->
   <section class="closing-section">
     <p class="closing-text">We so look forward to seeing you there!</p>
-    <p class="closing-heart">♥</p>
+    <hr class="header-hr" style="margin: 1rem auto 0.75rem;" />
     <p class="closing-names">Payton &amp; Katelyn Foster</p>
   </section>
 
